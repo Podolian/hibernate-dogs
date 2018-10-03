@@ -9,7 +9,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Getter
 @Setter
-@EqualsAndHashCode(of = "id")
+@EqualsAndHashCode(of = "name")
 @Entity
 @Table(name = "breed")
 public class Breed {
@@ -30,7 +30,7 @@ public class Breed {
     @Column(name = "recomended_nickname")
     private String recomendedNickname;
 
-    @ManyToMany(mappedBy = "breeds", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToMany(mappedBy = "breeds", fetch = FetchType.LAZY)
     @Setter(AccessLevel.PRIVATE)
     private Set<Vocation> vocations = new HashSet<>();
 
