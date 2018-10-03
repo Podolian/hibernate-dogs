@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+
+    <persistence-unit name="DogBreed">
+        <class>com.demians.model.Breed</class>
+        <class>com.demians.model.Vocation</class>
+
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:h2:mem:some_db;DB_CLOSE_DELAY=-1"/>
+            <property name="hibernate.connection.driver_class" value="org.h2.Driver"/>
+            <property name="hibernate.connection.username" value="someuser"/>
+            <property name="hibernate.connection.password" value="correct_password"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+        </properties>
+    </persistence-unit>
+
+
+</persistence>
